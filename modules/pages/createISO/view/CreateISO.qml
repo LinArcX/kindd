@@ -87,7 +87,7 @@ Page {
 
         LinArcXHLine {
             id: chooseIso
-            header: "2. Choose .iso file"
+            header: "2. Choose Input file(.iso, ...)"
             anchors.top: txtByteSize.bottom
             anchors.topMargin: 30
             qFont: qFont.name
@@ -95,7 +95,7 @@ Page {
 
         Button {
             id: qBtnOpenIsoDialog
-            text: "open .iso file"
+            text: "input file"
             anchors.top: chooseIso.bottom
             anchors.topMargin: 20
             anchors.left: parent.left
@@ -144,7 +144,7 @@ Page {
             isoPath = currentFolder() + "/" + fileName
             lblIsoPath.text = isoPath
             lblIsoPath.visible = true
-            console.log("You chose: " + isoPath)
+            console.log("You choose: " + isoPath)
             qIsoDialog.close()
         }
     }
@@ -224,7 +224,7 @@ Page {
 
     Text {
         id: txtCong
-        text: qsTr("congratulation! Your .iso is ready to use. To restart, click on done button :)")
+        text: qsTr("congratulation! To restart, click on 'done' button :)")
         anchors.bottom: btnCreateISO.top
         anchors.bottomMargin: 10
         font.pixelSize: 14
@@ -236,7 +236,7 @@ Page {
 
     Button{
         id: btnCreateISO
-        text: "Create ISO!"
+        text: "Convert/Copy!"
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width / 3
         anchors.bottom: parent.bottom
