@@ -6,6 +6,7 @@ A Kindflul dd gui written in qt quick :)
 
 ## Purposes
 1. Provide a modern/simple/safe UI for dd command.
+2. You can create bootable device with kindd.
 
 ##
 |Warning|Process|Done|
