@@ -1,0 +1,36 @@
+<RCC>
+    <qresource prefix="/">
+        <file>modules/pages/main.qml</file>
+        <file alias="modules/CreateISO.qml">modules/pages/createISO/view/CreateISO.qml</file>
+        <file alias="modules/ListDevices.qml">modules/pages/listDevices/view/ListDevices.qml</file>
+        <file alias="util/LinArcxTableView.qml">util/qml/LinArcxTableView.qml</file>
+        <file alias="util/LinArcxDialog.qml">util/qml/LinArcxDialog.qml</file>
+        <file alias="util/LinArcxPopUp.qml">util/qml/LinArcxPopUp.qml</file>
+        <file alias="util/LinArcXHLine.qml">util/qml/LinArcXHLine.qml</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="Adele.ttf">util/fonts/Adele.ttf</file>
+        <file alias="CaviarDreams.ttf">util/fonts/CaviarDreams.ttf</file>
+        <file alias="FontAwesome.ttf">util/fonts/FontAwesome.ttf</file>
+        <file alias="RadioSpace.ttf">util/fonts/RadioSpace.ttf</file>
+        <file alias="Shabnam.ttf">util/fonts/Shabnam.ttf</file>
+        <file alias="Vazir.ttf">util/fonts/Vazir.ttf</file>
+        <file alias="XMYekan.ttf">util/fonts/XMYekan.ttf</file>
+        <file alias="Titillium.otf">util/fonts/Titillium.otf</file>
+        <file alias="Exo.otf">util/fonts/Exo.otf</file>
+        <file alias="Aller.ttf">util/fonts/Aller.ttf</file>
+        <file alias="Amatic.ttf">util/fonts/Amatic.ttf</file>
+        <file alias="AlexBrush.ttf">util/fonts/AlexBrush.ttf</file>
+        <file alias="BeautifulCreatures.ttf">util/fonts/BeautifulCreatures.ttf</file>
+        <file alias="Daywalker.ttf">util/fonts/Daywalker.ttf</file>
+    </qresource>
+    <qresource prefix="/conf">
+        <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
+        <file alias="kindd.desktop">appconf/kindd.desktop</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="done.svg">util/images/done.svg</file>
+        <file alias="kindd.svg">util/images/kindd.svg</file>
+        <file alias="warning.svg">util/images/warning.svg</file>
+    </qresource>
+</RCC>

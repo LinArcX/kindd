@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Gnulium
+Comment=A Kindflul dd gui written in qt quick :)
+Exec=kindd
+Icon=kindd
+Terminal=false
+Type=Application
+Keywords=Utility;
+Categories=Utility;Qt;
