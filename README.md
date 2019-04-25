@@ -49,7 +49,8 @@ A kindly dd gui written in qt quick :)
     `./kindd`
     
 ### Tip for DE Users
-Users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
+**Kindd** uses pkexec internally. for most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
+
 `exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
 
 ## Contributing
