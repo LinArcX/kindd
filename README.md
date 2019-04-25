@@ -17,9 +17,7 @@ A kindly dd gui written in qt quick :)
 ## Installation
 
 ### Arch
-1. if you have arch-linux, life is easy:). just go to AUR:
-
-    `packer -S kindd-git`
+`packer -S kindd-git`
 
 ### Build From Source
 2. Install these dependencies first:
@@ -49,7 +47,10 @@ A kindly dd gui written in qt quick :)
 5. run the application:
 
     `./kindd`
-
+    
+### Tip for DE Users
+Users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
+`exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
 
 ## Contributing
 ![Open PR](https://img.shields.io/github/issues-pr-raw/LinArcX/Kindd.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Kindd.svg?style=flat-square)
