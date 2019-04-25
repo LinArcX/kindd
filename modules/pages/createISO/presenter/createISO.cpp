@@ -11,15 +11,15 @@ CreateISO::CreateISO(QObject* parent)
 {
 }
 
-void CreateISO::execCreateISO(QString isoPath, QString targetPath, QString byteSiz, QString sizeType)
+void CreateISO::execCreateISO(QString isoPath, QString targetPath, QString blockSize, QString sizeType)
 {
     QString finalIsoPath = isoPath.split("file://")[1];
     QString finalTargetPath = "/dev/" + targetPath;
-    QString finalByteSize = byteSiz + sizeType;
+    QString finalBlockSize = blockSize + sizeType;
 
     pCreateISO = new QProcess(this);
 
-    QString ddCommand = "pkexec dd if=" + finalIsoPath + " of=" + finalTargetPath + " bs=" + finalByteSize + " oflag=sync status=progress";
+    QString ddCommand = "pkexec dd if=" + finalIsoPath + " of=" + finalTargetPath + " bs=" + finalBlockSize + " oflag=sync status=progress";
     pCreateISO->start("sh", QStringList() << "-c" << ddCommand);
 
     connect(pCreateISO, &QProcess::bytesWritten, this, &CreateISO::returnBytes);
