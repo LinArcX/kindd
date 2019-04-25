@@ -76,6 +76,7 @@ E-Mail:linarcx@gmail.com
 	<img width="200" src="appconf/kindd.svg" alt="Kindd">
 	<br>
 	<br>
+	<p>Kindflul + dd</p>
 </h1>
 
 ## License
