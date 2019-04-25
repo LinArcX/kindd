@@ -61,14 +61,14 @@ Page {
 
         LinArcXHLine {
             id: chooseByteSizeHeader
-            header: "1. Choose Byte Size"
+            header: "1. Choose Block Size"
             anchors.top: parent.top
             qFont: qFont.name
         }
 
         TextField {
-            id: txtByteSize
-            placeholderText: "Enter Byte Size"
+            id: txtBlockSize
+            placeholderText: "Enter Block Size"
             anchors.top: chooseByteSizeHeader.bottom
             anchors.topMargin: 20
             anchors.left: parent.left
@@ -78,17 +78,17 @@ Page {
         ComboBox {
             id: cmbSizeType
             model: ["K", "M"]
-            anchors.left: txtByteSize.right
+            anchors.left: txtBlockSize.right
             anchors.leftMargin: 10
-            anchors.top: txtByteSize.top
+            anchors.top: txtBlockSize.top
             currentIndex: 1
-            width: txtByteSize.width
+            width: txtBlockSize.width
         }
 
         LinArcXHLine {
             id: chooseIso
             header: "2. Choose Input file(.iso, ...)"
-            anchors.top: txtByteSize.bottom
+            anchors.top: txtBlockSize.bottom
             anchors.topMargin: 30
             qFont: qFont.name
         }
@@ -101,7 +101,7 @@ Page {
             anchors.left: parent.left
             anchors.leftMargin: 10
             onClicked: qIsoDialog.open()
-            width: txtByteSize.width
+            width: txtBlockSize.width
         }
 
         Label{
@@ -126,7 +126,7 @@ Page {
             anchors.topMargin: 20
             anchors.left: parent.left
             anchors.leftMargin: 10
-            width: txtByteSize.width
+            width: txtBlockSize.width
             model: ListModel {
               id: model
             }
@@ -241,7 +241,7 @@ Page {
         width: parent.width / 3
         anchors.bottom: parent.bottom
         anchors.bottomMargin: 20
-        enabled: lblIsoPath.text != "" && txtByteSize.text != "" ? true : false
+        enabled: lblIsoPath.text != "" && txtBlockSize.text != "" ? true : false
         onClicked: {
             mPopUp.open()
         }
@@ -262,7 +262,7 @@ Page {
                 pgBar.visible = true
                 txtProgress.visible = true
                 btnCreateISO.enabled = false
-                mCreateISO.execCreateISO(lblIsoPath.text, cmbTargetPath.currentText, txtByteSize.text, cmbSizeType.currentText)
+                mCreateISO.execCreateISO(lblIsoPath.text, cmbTargetPath.currentText, txtBlockSize.text, cmbSizeType.currentText)
             }
         }
 
