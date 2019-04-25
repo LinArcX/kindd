@@ -27,9 +27,12 @@ A Kindflul dd gui written in qt quick :)
 |Dependencies||
 |-----|:-----:|
 |[git](https://www.archlinux.org/packages/extra/x86_64/git/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|[coreutils](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|[polkit](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |[qt5-base](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |[qt5-quickcontrols](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 |[qt5-quickcontrols2](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
+|[qt5-graphicaleffects](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|![](https://github.com/LinxGem33/Neon/blob/master/artwork/done.svg.png?raw=true)
 
 3. clone the repo:
 
@@ -73,7 +76,6 @@ E-Mail:linarcx@gmail.com
 	<img width="200" src="appconf/kindd.svg" alt="Kindd">
 	<br>
 	<br>
-    <p2>Kindd</p2>
 </h1>
 
 ## License
