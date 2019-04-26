@@ -1,5 +1,5 @@
 # Kindd ![Language](https://img.shields.io/github/languages/top/LinArcX/Kindd.svg?style=flat-square) ![RepoSize](https://img.shields.io/github/repo-size/LinArcX/Kindd.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Kindd.svg?colorB=green&style=flat-square)
-A kindly dd gui written in qt quick :)
+A kindful dd gui written in qt quick :)
 
 ## Preview
 !["gnulium"](shots/init.png "Kindd")
@@ -78,7 +78,7 @@ E-Mail:linarcx@gmail.com
 	<img width="200" src="appconf/kindd.svg" alt="Kindd">
 	<br>
 	<br>
-	<p>kindly + dd</p>
+	<p>kindful + dd</p>
 </h1>
 
 ## License
