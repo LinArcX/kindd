@@ -11,7 +11,7 @@ A kindful dd gui written in qt quick :)
 ##
 |Warning|Process|Done|
 |:-----:|:-----:|:-----:|
-|![](./shots/init.png)|![](./shots/process.png)|![](./shots/devices.png)|![](./shots/done.png)|
+|![](./shots/1.0.0/init.png)|![](./shots/1.0.0/process.png)|![](./shots/1.0.0/devices.png)|![](./shots/1.0.0/done.png)|
 |Click image to enlarge|Click image to enlarge| Click image to enlarge| Click image to enlarge|
 
 ## Installation
