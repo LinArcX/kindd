@@ -201,7 +201,7 @@ int Settings::loadBlockSize()
 {
     QSettings settings(COMPANY_NAME, APP_NAME);
     settings.beginGroup(APP_GROUP);
-    QString bs = settings.value(BLOCK_SIZE, 0).toString();
+    QString bs = settings.value(BLOCK_SIZE, 5).toString();
     settings.endGroup();
     emit blockSizeReady(bs);
 }
