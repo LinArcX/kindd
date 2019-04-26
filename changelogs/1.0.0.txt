@@ -1,0 +1,4 @@
+1.0.0
+New:
+    1. Add setting menu. (You can now change theme of the app, font family  and font size of it).
+    2. Add default bs size.
