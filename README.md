@@ -1,5 +1,5 @@
 # Kindd ![Language](https://img.shields.io/github/languages/top/LinArcX/Kindd.svg?style=flat-square) ![RepoSize](https://img.shields.io/github/repo-size/LinArcX/Kindd.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Kindd.svg?colorB=green&style=flat-square)
-A Kindflul dd gui written in qt quick :)
+A kindful dd gui written in qt quick :)
 
 ## Preview
 !["gnulium"](shots/init.png "Kindd")
@@ -17,9 +17,7 @@ A Kindflul dd gui written in qt quick :)
 ## Installation
 
 ### Arch
-1. if you have arch-linux, life is easy:). just go to AUR:
-
-    `packer -S kindd-git`
+`packer -S kindd-git`
 
 ### Build From Source
 2. Install these dependencies first:
@@ -49,7 +47,11 @@ A Kindflul dd gui written in qt quick :)
 5. run the application:
 
     `./kindd`
+    
+### Tip for DE Users
+**Kindd** uses pkexec internally. for most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
 
+`exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
 
 ## Contributing
 ![Open PR](https://img.shields.io/github/issues-pr-raw/LinArcX/Kindd.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Kindd.svg?style=flat-square)
@@ -76,6 +78,7 @@ E-Mail:linarcx@gmail.com
 	<img width="200" src="appconf/kindd.svg" alt="Kindd">
 	<br>
 	<br>
+	<p>kindful + dd</p>
 </h1>
 
 ## License
