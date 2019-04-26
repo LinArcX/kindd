@@ -3,12 +3,12 @@ import QtQuick.Window 2.11
 import QtQuick.Controls 2.2
 import QtQuick.Controls.Material 2.1
 
-
 Rectangle {
     id: root
     width: parent.parent.width
     height: parent.parent.height
     property alias mModel: qModel
+    property string headerZero
     property string headerOne
     property string headerTwo
     property string headerThree
@@ -17,8 +17,6 @@ Rectangle {
     property string headerSix
     property string headerSeven
     property string headerEight
-    property string headerNine
-
 
     property string headerColor
     property string bodyColor
@@ -75,7 +73,7 @@ Rectangle {
                     visible: dataColumns >= 1 ? true : false
 
                     Label {
-                        text: headerOne ? headerOne : "one"
+                        text: headerZero ? headerZero : "zero"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -92,7 +90,7 @@ Rectangle {
                     visible: dataColumns >= 2 ? true : false
 
                     Label {
-                        text: headerTwo ? headerTwo : "two"
+                        text: headerOne ? headerOne : "one"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -109,7 +107,7 @@ Rectangle {
                     visible: dataColumns >= 3 ? true : false
 
                     Label {
-                        text: headerThree ? headerThree : "three"
+                        text: headerTwo ? headerTwo : "two"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -126,7 +124,7 @@ Rectangle {
                     visible: dataColumns >= 4 ? true : false
 
                     Label {
-                        text: headerFour ? headerFour : "four"
+                        text: headerThree ? headerThree : "three"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -143,7 +141,7 @@ Rectangle {
                     visible: dataColumns >= 5 ? true : false
 
                     Label {
-                        text: headerFive? headerFive : "five"
+                        text: headerFour ? headerFour : "four"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -160,7 +158,7 @@ Rectangle {
                     visible: dataColumns >= 6 ? true : false
 
                     Label {
-                        text: headerSix? headerSix : "six"
+                        text: headerFive ? headerFive : "five"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -177,7 +175,7 @@ Rectangle {
                     visible: dataColumns >= 7 ? true : false
 
                     Label {
-                        text: headerSeven? headerSeven : "seven"
+                        text: headerSix ? headerSix : "six"
                         font.bold: true
                         font.pixelSize: 13
                         anchors.verticalCenter: parent.verticalCenter
@@ -200,7 +198,7 @@ Rectangle {
                     visible: dataColumns >= 1 ? true : false
 
                     Label {
-                        text: one
+                        text: dataColumns >= 1 ? zero : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -225,7 +223,7 @@ Rectangle {
                     visible: dataColumns >= 2 ? true : false
 
                     Label {
-                        text: two
+                        text: dataColumns >= 2 ? one : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -250,7 +248,7 @@ Rectangle {
                     visible: dataColumns >= 3 ? true : false
 
                     Label {
-                        text: three
+                        text: dataColumns >= 3 ? two : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -275,8 +273,8 @@ Rectangle {
                     visible: dataColumns >= 4 ? true : false
 
                     Label {
-                        //enabled: dataColumns >= 4 ? true : false
-                        text: dataColumns >= 4 ? four : ""
+                        enabled: dataColumns >= 4 ? true : false
+                        text: dataColumns >= 4 ? three : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -302,7 +300,7 @@ Rectangle {
 
                     Label {
                         enabled: dataColumns >= 5 ? true : false
-                        text: dataColumns >= 5 ? five : ""
+                        text: dataColumns >= 5 ? four : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -327,8 +325,8 @@ Rectangle {
                     visible: dataColumns >= 6 ? true : false
 
                     Label {
-                        enabled: dataColumns >= 5 ? true : false
-                        text: dataColumns >= 6 ? six : ""
+                        enabled: dataColumns >= 6 ? true : false
+                        text: dataColumns >= 6 ? five : ""
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }
@@ -353,8 +351,17 @@ Rectangle {
                     visible: dataColumns >= 7 ? true : false
 
                     Label {
-                        enabled: dataColumns >= 5 ? true : false
-                        text: dataColumns >= 7 ? seven : ""
+                        enabled: dataColumns >= 7 ? true : false
+                        text:{
+                            if (dataColumns >= 7){
+                                if(six != undefined)
+                                    six
+                                else
+                                    ""
+                            }else{
+                                ""
+                            }
+                        }
                         anchors.verticalCenter: parent.verticalCenter
                         anchors.horizontalCenter: parent.horizontalCenter
                     }

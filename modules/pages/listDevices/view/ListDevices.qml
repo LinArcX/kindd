@@ -2,7 +2,7 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 import linarcx.kindd.ListDevices 1.0
 
-import "qrc:/util/"
+import "qrc:/components/qml/"
 
 Page {
     width: qWindow.width
@@ -24,13 +24,13 @@ Page {
         headerColor: "#FF5722"
 
         dataColumns: 7
-        headerOne: "name"
-        headerTwo: "maj/min"
-        headerThree: "RM"
-        headerFour: "Size"
-        headerFive: "RO"
-        headerSix: "Type"
-        headerSeven: "MountPoint"
+        headerZero: "name"
+        headerOne: "maj/min"
+        headerTwo: "RM"
+        headerThree: "Size"
+        headerFour: "RO"
+        headerFive: "Type"
+        headerSix: "MountPoint"
 
         Connections {
             target: qTableBuildlings
@@ -42,13 +42,13 @@ Page {
         onModelReady: {
             for (var i = 0; i < model.length; i++) {
                 qTableBuildlings.mModel.append({
-                                                   "one": model[i][0],
-                                                   "two": model[i][1],
-                                                   "three": model[i][2],
-                                                   "four": model[i][3],
-                                                   "five": model[i][4],
-                                                   "six": model[i][5],
-                                                   "seven": model[i][6]
+                                                   "zero": model[i][0],
+                                                   "one": model[i][1],
+                                                   "two": model[i][2],
+                                                   "three": model[i][3],
+                                                   "four": model[i][4],
+                                                   "five": model[i][5],
+                                                   "six": model[i][6]
                                                })
             }
         }

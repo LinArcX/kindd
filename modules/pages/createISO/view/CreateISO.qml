@@ -2,12 +2,14 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 import linarcx.kindd.CreateISO 1.0
 import linarcx.kindd.ListDevices 1.0
+import linarcx.kindd.Settings 1.0
 
-import "qrc:/util/"
+import "qrc:/components/qml/"
 
 Page {
+    id: qPageCreateIso
     width: qWindow.width
-    height: qWindow.height
+    height: btnCreateISO.height + txtKindd.height + qScrollView.height + imgDone.height + txtCong.height + 40
 
     property var isoPath
     property var outputPath
@@ -20,21 +22,20 @@ Page {
        id: mCreateISO
     }
 
+    Settings{
+        id: qSettings
+    }
+
     FontLoader {
         id: mFont
         source: "qrc:/fonts/Amatic.ttf"
     }
 
-    FontLoader {
-        id: qFont
-        source: "qrc:/fonts/Aller.ttf"
-    }
-
     Text {
         id: txtKindd
-        text: qsTr("A Kindflul dd gui written in qt quick :)")
+        text: qsTr("A Kindful dd gui written in qt quick :)")
         anchors.horizontalCenter: parent.horizontalCenter
-        font.pixelSize: 30
+        font.pixelSize: 25
         font.family: mFont.name
         anchors.verticalCenter: imgKindd.verticalCenter
     }
@@ -42,20 +43,19 @@ Page {
     Image {
         id: imgKindd
         source: "qrc:/images/kindd.svg"
-        sourceSize.width: 80
-        sourceSize.height: 80
+        sourceSize.width: 60
+        sourceSize.height: 60
         anchors.top: parent.top
-        anchors.topMargin: 10
+        anchors.topMargin: 5
         anchors.right: txtKindd.left
-        anchors.rightMargin: 10
+        anchors.rightMargin: 5
     }
 
     ScrollView {
         id: qScrollView
         width: parent.width - 5
-        height: parent.height - 5
+        height: chooseByteSizeHeader.height + txtBlockSize.height + cmbSizeType.height + chooseIso.height + qBtnOpenIsoDialog.height + chooseTargetPath.height + cmbTargetPath.height
         anchors.top: imgKindd.bottom
-        anchors.topMargin: 30
         ScrollBar.vertical.policy: ScrollBar.AsNeeded
         ScrollBar.horizontal.policy: ScrollBar.AsNeeded
 
@@ -63,23 +63,23 @@ Page {
             id: chooseByteSizeHeader
             header: "1. Choose Block Size"
             anchors.top: parent.top
-            qFont: qFont.name
+            anchors.topMargin: 10
         }
 
         TextField {
             id: txtBlockSize
             placeholderText: "Enter Block Size"
             anchors.top: chooseByteSizeHeader.bottom
-            anchors.topMargin: 20
+            anchors.topMargin: 10
             anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.leftMargin: 5
         }
 
         ComboBox {
             id: cmbSizeType
             model: ["K", "M"]
             anchors.left: txtBlockSize.right
-            anchors.leftMargin: 10
+            anchors.leftMargin: 5
             anchors.top: txtBlockSize.top
             currentIndex: 1
             width: txtBlockSize.width
@@ -89,17 +89,16 @@ Page {
             id: chooseIso
             header: "2. Choose Input file(.iso, ...)"
             anchors.top: txtBlockSize.bottom
-            anchors.topMargin: 30
-            qFont: qFont.name
+            anchors.topMargin: 20
         }
 
         Button {
             id: qBtnOpenIsoDialog
             text: "input file"
             anchors.top: chooseIso.bottom
-            anchors.topMargin: 20
+            anchors.topMargin: 10
             anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.leftMargin: 5
             onClicked: qIsoDialog.open()
             width: txtBlockSize.width
         }
@@ -109,23 +108,22 @@ Page {
             visible: false
             anchors.verticalCenter: qBtnOpenIsoDialog.verticalCenter
             anchors.left: qBtnOpenIsoDialog.right
-            anchors.leftMargin: 10
+            anchors.leftMargin: 5
         }
 
         LinArcXHLine {
             id: chooseTargetPath
             header: "3. Choose Target Path"
             anchors.top: lblIsoPath.bottom
-            anchors.topMargin: 30
-            qFont: qFont.name
+            anchors.topMargin: 20
         }
 
         ComboBox {
             id: cmbTargetPath
             anchors.top: chooseTargetPath.bottom
-            anchors.topMargin: 20
+            anchors.topMargin: 10
             anchors.left: parent.left
-            anchors.leftMargin: 10
+            anchors.leftMargin: 5
             width: txtBlockSize.width
             model: ListModel {
               id: model
@@ -151,6 +149,14 @@ Page {
 
     Component.onCompleted: {
         mListDevices.execListDevices()
+        qSettings.loadBlockSize()
+    }
+
+    Connections{
+        target: qSettings
+        onBlockSizeReady:{
+           txtBlockSize.text = blockSize
+        }
     }
 
     Connections {
@@ -158,7 +164,10 @@ Page {
         onModelReady: {
             model.reverse()
             for (var i = 0; i < model.length; i++) {
-                cmbTargetPath.model.append({"text": model[i][0]})
+                if(model[i][6] != undefined)
+                    cmbTargetPath.model.append({"text": model[i][0] + ": " + model[i][6]})
+                else
+                    cmbTargetPath.model.append({"text": model[i][0]})
             }
             cmbTargetPath.currentIndex = 0
         }
@@ -187,8 +196,8 @@ Page {
 
     Text {
         id: txtProgress
-        anchors.bottom: pgBar.top
-        anchors.bottomMargin: 20
+        anchors.top: qScrollView.bottom
+        anchors.topMargin: 20
         anchors.horizontalCenter: parent.horizontalCenter
         visible: false
     }
@@ -196,8 +205,8 @@ Page {
     ProgressBar {
         id: pgBar
         indeterminate: true
-        anchors.bottom: btnCreateISO.top
-        anchors.bottomMargin: 20
+        anchors.top: txtProgress.bottom
+        anchors.topMargin: 20
         visible: false
         width: btnCreateISO.width
         anchors.horizontalCenter: parent.horizontalCenter
@@ -205,13 +214,13 @@ Page {
 
     Image {
         id: imgDone
+        anchors.top: qScrollView.bottom
+        anchors.topMargin: 20
         source: "qrc:/images/done.svg"
         visible: false
         anchors.horizontalCenter: parent.horizontalCenter
         sourceSize.width: 60
         sourceSize.height: 60
-        anchors.bottom: txtCong.top
-        anchors.bottomMargin: 5
         MouseArea{
             anchors.fill: parent
             onClicked: {
@@ -225,11 +234,10 @@ Page {
     Text {
         id: txtCong
         text: qsTr("congratulation! To restart, click on 'done' button :)")
-        anchors.bottom: btnCreateISO.top
-        anchors.bottomMargin: 10
+        anchors.top: imgDone.bottom
+        anchors.topMargin: 10
         font.pixelSize: 14
         visible: false
-        font.family: qFont.name
         anchors.horizontalCenter: parent.horizontalCenter
         color: "green"
     }
@@ -239,8 +247,8 @@ Page {
         text: "Convert/Copy!"
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width / 3
-        anchors.bottom: parent.bottom
-        anchors.bottomMargin: 20
+        anchors.top: pgBar.bottom
+        anchors.topMargin: 10
         enabled: lblIsoPath.text != "" && txtBlockSize.text != "" ? true : false
         onClicked: {
             mPopUp.open()

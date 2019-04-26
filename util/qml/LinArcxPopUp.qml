@@ -100,7 +100,6 @@ Popup {
             id: txtTitlePopUp
             text: mTitle
             font.pixelSize: 30
-            font.family: mFont.name
             anchors.top: parent.top
             anchors.right: parent.right
             anchors.margins: 20
@@ -118,7 +117,7 @@ Popup {
 
         Text {
             id: txtBodyPopUp
-            text: mBody
+            text: mBody ? mBody : ""
             font.pixelSize: 14
             width: mPopUp.width - 60
             wrapMode: TextArea.Wrap
