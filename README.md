@@ -17,7 +17,11 @@ A kindful dd gui written in qt quick :)
 ## Installation
 
 ### Arch
-`packer -S kindd-git`
+1. git version
+`trizen -S kindd-git`
+
+2. release version
+`trizen -S kindd`
 
 ### Build From Source
 2. Install these dependencies first:
