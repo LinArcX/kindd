@@ -1,5 +1,5 @@
 ############### General ###############
-QT += core qml quick quickcontrols2 widgets
+QT += core qml quick quickcontrols2
 CONFIG += c++11
 
 VERSION = $$system(git log --pretty=format:'%h' -n 1)

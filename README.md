@@ -11,8 +11,8 @@ A kindful dd gui written in qt quick :)
 ##
 |Warning|Process|Done|
 |:-----:|:-----:|:-----:|
-|![](./shots/warning.png)|![](./shots/process.png)|![](./shots/done.png)|
-|Click image to enlarge|Click image to enlarge| Click image to enlarge|
+|![](./shots/init.png)|![](./shots/process.png)|![](./shots/devices.png)|![](./shots/done.png)|
+|Click image to enlarge|Click image to enlarge| Click image to enlarge| Click image to enlarge|
 
 ## Installation
 
@@ -47,7 +47,7 @@ A kindful dd gui written in qt quick :)
 5. run the application:
 
     `./kindd`
-    
+
 ### Tip for DE Users
 **Kindd** uses pkexec internally. for most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
 

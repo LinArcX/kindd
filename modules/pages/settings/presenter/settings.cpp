@@ -1,7 +1,7 @@
-#include <QApplication>
 #include <QDebug>
 #include <QFont>
 #include <QFontDatabase>
+#include <QGuiApplication>
 #include <QProcess>
 #include <QQuickStyle>
 #include <QSettings>
@@ -63,7 +63,7 @@ void Settings::resetSettings()
 
 void Settings::restartApp()
 {
-    QProcess::startDetached(QApplication::applicationFilePath());
+    QProcess::startDetached(QGuiApplication::applicationFilePath());
     exit(12);
 }
 
@@ -94,7 +94,7 @@ void Settings::loadFontSize()
     settings.beginGroup(FONT_GROUP);
     QFont mFont;
     mFont.setPixelSize(qvariant_cast<int>(settings.value(FONT_SIZE, 12)));
-    QApplication::setFont(mFont);
+    QGuiApplication::setFont(mFont);
     settings.endGroup();
 }
 

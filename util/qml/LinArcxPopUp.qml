@@ -13,6 +13,7 @@ Popup {
     property variant mImage
     property variant mTitle
     property variant mBody
+    property int titleSize
 
     modal: true
     focus: true
@@ -99,10 +100,11 @@ Popup {
         Text {
             id: txtTitlePopUp
             text: mTitle
-            font.pixelSize: 30
+            font.pixelSize: titleSize ? titleSize : 15
             anchors.top: parent.top
             anchors.right: parent.right
             anchors.margins: 20
+            anchors.verticalCenter: imgPopUp.Center
         }
 
         Rectangle {

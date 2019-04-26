@@ -247,7 +247,7 @@ Page {
         text: "Convert/Copy!"
         anchors.horizontalCenter: parent.horizontalCenter
         width: parent.width / 3
-        anchors.top: pgBar.bottom
+        anchors.top: pgBar.visible ? pgBar.bottom : txtCong.bottom
         anchors.topMargin: 10
         enabled: lblIsoPath.text != "" && txtBlockSize.text != "" ? true : false
         onClicked: {
