@@ -19,7 +19,7 @@ HEADERS += $$files(modules/*.h, true) \
 RESOURCES += qml.qrc
 
 ############### I18n ###############
-TRANSLATIONS = i18n/persian.ts
+#TRANSLATIONS = i18n/persian.ts
 
 
 ############### Other files ###############

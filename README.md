@@ -2,7 +2,7 @@
 A kindful dd gui written in qt quick :)
 
 ## Preview
-!["gnulium"](shots/init.png "Kindd")
+!["gnulium"](shots/1.0.0/init.png "Kindd")
 
 ## Purposes
 1. Provide a modern/simple/safe UI for dd command.

@@ -15,16 +15,9 @@ ApplicationWindow {
     property int pageHeight
     signal pageSettingsCompleted(var qHeight)
 
-//    FontLoader {
-//        id: mFont
-//        source: "qrc:/fonts/Aller.ttf"
-//    }
-
     onPageSettingsCompleted: {
         qWindow.minimumHeight = qHeight
     }
-
-//    font.family: mFont.name
 
     SwipeView {
         id: swipeView
