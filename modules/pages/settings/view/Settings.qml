@@ -20,29 +20,15 @@ Page {
         id: mSettings
     }
 
-    Component.onCompleted: {
-        mSettings.loadBlockSize()
-        pageSettingsCompleted(mSettingsContent.height)
-        lblCurrentBlockSize.text = sldBlockSize.value
-    }
-
-    Connections {
-        target: mSettings
-        onBlockSizeReady: {
-            sldBlockSize.value = blockSize
-        }
-    }
-
     Button {
         id: btnSave
         text: CStr.save
-        width: btnDefaults.width
-
+        width: parent.width / 2 - 10
+        height: 35
+        anchors.bottom: parent.bottom
+        anchors.leftMargin: 5
+        anchors.bottomMargin: 5
         anchors.left: parent.left
-        anchors.leftMargin: 20
-        anchors.top: parent.top
-        anchors.topMargin: 20
-
         onClicked: {
             mySettings.fontFamily = cbFontFamily.currentText
             mySettings.fontSize = cbFontSize.currentText
@@ -58,9 +44,14 @@ Page {
     Button {
         id: btnDefaults
         text: CStr.defaults
+        width: parent.width / 2 - 10
+        height: 35
+        anchors.bottom: parent.bottom
+        anchors.rightMargin: 5
+        anchors.bottomMargin: 5
         anchors.left: btnSave.right
-        anchors.bottom: btnSave.bottom
-        anchors.leftMargin: 20
+        anchors.leftMargin: 5
+
         onClicked: {
             var mDialog = mDialogResetSettings.createObject(mSettingsContent)
             mDialog.open()
@@ -69,11 +60,9 @@ Page {
 
     ScrollView {
         id: svSettings
-        width: parent.width - 5
-        //        height: paletteHeader.height + cbStyle.height
-        //                + fontFamilyHeader.height + cbFontFamily.height + fontSizeHeader.height
-        //                + cbFontSize.height
-        anchors.top: btnDefaults.bottom
+        width: parent.width
+        height: parent.height - 40
+        anchors.top: parent.top
         ScrollBar.vertical.policy: ScrollBar.AsNeeded
         ScrollBar.horizontal.policy: ScrollBar.AsNeeded
 
@@ -83,13 +72,13 @@ Page {
             anchors.top: parent.top
             anchors.topMargin: 20
             imgPath: CStr.imgPalette
-            width: parent.width / 2 - 20
-            lineWidth: parent.width / 2 - 20
+            width: parent.width / 2 - 40
+            lineWidth: parent.width / 2 - 40
         }
 
         ComboBox {
             id: cbStyle
-            width: parent.width / 2 - 20
+            width: parent.width / 2 - 40
             anchors.margins: 5
             anchors.top: paletteHeader.bottom
             anchors.topMargin: 5
@@ -104,8 +93,8 @@ Page {
         LinArcXHLine {
             id: fontFamilyHeader
             header: "Font Family"
-            width: parent.width / 2 - 20
-            lineWidth: parent.width / 2 - 20
+            width: parent.width / 2 - 40
+            lineWidth: parent.width / 2 - 40
             anchors.top: parent.top
             anchors.topMargin: 20
             anchors.left: paletteHeader.right
@@ -116,7 +105,7 @@ Page {
         ComboBox {
             id: cbFontFamily
             anchors.margins: 5
-            width: parent.width / 2 - 20
+            width: parent.width / 2 - 40
             anchors.left: fontFamilyHeader.left
             anchors.top: fontFamilyHeader.bottom
             anchors.topMargin: 5
@@ -135,13 +124,13 @@ Page {
             anchors.top: cbStyle.bottom
             anchors.topMargin: 20
             imgPath: CStr.imgFontSize
-            width: parent.width / 2 - 20
-            lineWidth: parent.width / 2 - 20
+            width: parent.width / 2 - 40
+            lineWidth: parent.width / 2 - 40
         }
 
         ComboBox {
             id: cbFontSize
-            width: parent.width / 2 - 20
+            width: parent.width / 2 - 40
             anchors.margins: 5
             anchors.left: parent.left
             anchors.top: fontSizeHeader.bottom
@@ -161,8 +150,8 @@ Page {
             anchors.topMargin: 20
             anchors.left: fontFamilyHeader.left
             imgPath: CStr.imgBlockSize
-            width: parent.width / 2 - 20
-            lineWidth: parent.width / 2 - 20
+            width: parent.width / 2 - 40
+            lineWidth: parent.width / 2 - 40
         }
 
         Slider {
@@ -171,7 +160,7 @@ Page {
             to: 100
             value: 10
             stepSize: 1
-            width: parent.width / 2 - 20
+            width: parent.width / 2 - 40
             anchors.leftMargin: 10
             anchors.left: bsHeader.left
             anchors.top: bsHeader.bottom
@@ -232,6 +221,19 @@ Page {
                 width: parent.width
                 height: parent.height
             }
+        }
+    }
+
+    Component.onCompleted: {
+        mSettings.loadBlockSize()
+        //        pageSettingsCompleted(mSettingsContent.height)
+        lblCurrentBlockSize.text = sldBlockSize.value
+    }
+
+    Connections {
+        target: mSettings
+        onBlockSizeReady: {
+            sldBlockSize.value = blockSize
         }
     }
 }

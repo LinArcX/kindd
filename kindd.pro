@@ -11,16 +11,14 @@ QMAKE_CXXFLAGS_WARN_OFF -= -Wunused-parameter
 
 ############### Resources ###############
 SOURCES += $$files(modules/*.cpp, true) \
-           $$files(util/cpp/*.cpp, true)
+           $$files(util/cpp/*.cpp, true) \
+           $$files(libs/*.cpp, true)
 
 HEADERS += $$files(modules/*.h, true) \
-           $$files(util/cpp/*.h, true)
+           $$files(util/cpp/*.h, true) \
+           $$files(libs/*.h, true)
 
 RESOURCES += qml.qrc
-
-############### I18n ###############
-#TRANSLATIONS = i18n/persian.ts
-
 
 ############### Other files ###############
 OTHER_FILES += LICENSE\
@@ -57,3 +55,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 #Debug:MOC_DIR = debug/.moc
 #Debug:RCC_DIR = debug/.rcc
 #Debug:UI_DIR = debug/.ui
+
+############### I18n ###############
+#TRANSLATIONS = i18n/persian.ts

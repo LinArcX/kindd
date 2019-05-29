@@ -1,0 +1,7 @@
+2.0.0
+New:
+    1. Redesign whole app.
+    2. List only removable devices. (So there is no choice for users to format/delete partitions accidentally).
+    3. There is no need for list-devices page.
+    4. Some improvment in file-chooser dialog.
+    5. Automatic usb add/eject detection.

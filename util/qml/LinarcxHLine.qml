@@ -10,7 +10,6 @@ Rectangle {
     property int textMargin
     property string imgPath
     property string qFont
-    property int qLeftMargin: 0
     width: parent.width
     height: txtHeader.height + line.height
     color: "transparent"
@@ -38,12 +37,12 @@ Rectangle {
 
     Rectangle {
         id: line
-        width: lineWidth ? lineWidth : parent.width - 20 - qLeftMargin
+        width: lineWidth ? lineWidth : parent.width - 20
 //        anchors.horizontalCenter: parent.horizontalCenter
         height: lineHeight ? lineHeight : 0.9
         color: lineColor ? lineColor : "#bfbfbf"
         anchors.bottom: parent.bottom
         anchors.left: parent.left
-        anchors.leftMargin: qLeftMargin ? qLeftMargin : 10
+        anchors.leftMargin: 10
     }
 }

@@ -1,9 +1,8 @@
 <RCC>
-    <qresource prefix="/">
-        <file>modules/pages/main.qml</file>
-        <file alias="modules/CreateISO.qml">modules/pages/createISO/view/CreateISO.qml</file>
-        <file alias="modules/ListDevices.qml">modules/pages/listDevices/view/ListDevices.qml</file>
-        <file alias="modules/Settings.qml">modules/pages/settings/view/Settings.qml</file>
+    <qresource prefix="/pages">
+        <file alias="main.qml">modules/pages/main.qml</file>
+        <file alias="CreateISO.qml">modules/pages/createISO/view/CreateISO.qml</file>
+        <file alias="Settings.qml">modules/pages/settings/view/Settings.qml</file>
     </qresource>
     <qresource prefix="/fonts">
         <file alias="Adele.ttf">util/fonts/Adele.ttf</file>
@@ -33,6 +32,22 @@
         <file alias="text.svg">util/images/text.svg</file>
         <file alias="fontSize.svg">util/images/fontSize.svg</file>
         <file alias="block.svg">util/images/block.svg</file>
+        <file alias="createISO.svg">util/images/createISO.svg</file>
+        <file>util/images/002-iso.svg</file>
+        <file>util/images/003-iso-1.svg</file>
+        <file>util/images/004-iso-2.svg</file>
+        <file>util/images/005-folder.svg</file>
+        <file>util/images/008-settings.svg</file>
+        <file>util/images/011-settings-3.svg</file>
+        <file alias="settings.svg">util/images/settings.svg</file>
+        <file alias="listDevices_.svg">util/images/listDevices_.svg</file>
+        <file>util/images/001-database.svg</file>
+        <file alias="listDevices.svg">util/images/listDevices.svg</file>
+        <file>util/images/003-folder-1.svg</file>
+        <file>util/images/004-document.svg</file>
+        <file>util/images/005-document-1.svg</file>
+        <file alias="bird.png">util/images/bird.png</file>
+        <file alias="hiddenFolder.svg">util/images/hiddenFolder.svg</file>
     </qresource>
     <qresource prefix="/components">
         <file alias="qml/LinArcxTableView.qml">util/qml/LinArcxTableView.qml</file>
@@ -43,9 +58,18 @@
         <file alias="js/ElementCreator.js">util/js/ElementCreator.js</file>
         <file alias="js/CanvasUtil.js">util/js/CanvasUtil.js</file>
         <file alias="qml/ToolTiper.qml">util/qml/ToolTiper.qml</file>
+        <file alias="qml/LinarcxToolTip.qml">util/qml/LinarcxToolTip.qml</file>
+        <file alias="qml/LinarcxImageToolTiper.qml">util/qml/LinarcxImageToolTiper.qml</file>
+        <file alias="qml/LinarcxLabel.qml">util/qml/LinarcxLabel.qml</file>
+        <file alias="qml/LinarcxButton.qml">util/qml/LinarcxButton.qml</file>
+        <file alias="js/Constants.js">util/js/Constants.js</file>
     </qresource>
     <qresource prefix="/strings">
         <file alias="SettingsStrings.js">util/strings/SettingsStrings.js</file>
         <file alias="CoreStrings.js">util/strings/CoreStrings.js</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file alias="plug.wav">util/sounds/plug.wav</file>
+        <file alias="unplug.wav">util/sounds/unplug.wav</file>
     </qresource>
 </RCC>
