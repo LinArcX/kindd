@@ -127,23 +127,6 @@ void CreateISO::returnError()
 //    qDebug() << msg;
 //}
 
-//    QProcess pListDevices;
-//    connect(&pListDevices, &QProcess::readyReadStandardOutput, [&]() {
-//        QString outPut = QString(pListDevices.readAllStandardOutput());
-//        if (outPut.contains("by-id/usb*")) {
-//            QList<QString> qv;
-//            emit modelReady(qv);
-//        } else {
-//            QStringList list = outPut.split("\n");
-//            list.removeLast();
-//            std::regex word_regex = Utils::getPattern();
-//            QList<QString> model = list.toVector().toList();
-//            emit modelReady(model);
-//        }
-//    });
-//    pListDevices.start("sh", QStringList() << "-c" << LIST_OF_DEVICES);
-//    pListDevices.waitForFinished(2000);
-
 //    connect(&pListDevices, &QProcess::readyReadStandardError, [=]() { plainTextEdit->appendPlainText(process.readAllStandardError()); });
 //    connect(pListDevices, &QProcess::readyReadStandardOutput, this, [=] { returnDevices(pListDevices); });
 

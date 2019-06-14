@@ -9,7 +9,7 @@ A kindful dd gui written in qt quick :)
 2. You can create bootable device with kindd.
 
 ##
-|Warning|Process|Done|
+|Landing Page|Process|Settings|
 |:-----:|:-----:|:-----:|
 |![](./shots/2.0.0/init.png)|![](./shots/2.0.0/process.png)|![](./shots/2.0.0/settings.png)|![](./shots/2.0.0/done.png)|
 |Click image to enlarge|Click image to enlarge| Click image to enlarge| Click image to enlarge|
@@ -32,6 +32,7 @@ A kindful dd gui written in qt quick :)
 |[coreutils](https://www.archlinux.org/packages/core/x86_64/coreutils/)|
 |[polkit](https://www.archlinux.org/packages/extra/x86_64/polkit/)|
 |[qt5-base](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|
+|[qt5-multimedia](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|
 |[qt5-quickcontrols](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols/)|
 |[qt5-quickcontrols2](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|
 |[qt5-graphicaleffects](https://www.archlinux.org/packages/extra/x86_64/qt5-graphicaleffects/)
@@ -52,10 +53,12 @@ A kindful dd gui written in qt quick :)
 
     `./kindd`
 
-### Tip for DE Users
-**Kindd** uses pkexec internally. for most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other DE) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
+### Tip for Windows-manager's Users
+**Kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
 
 `exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
+
+Hint: I don't have awesome or other wms. So you should put above line in your startup config according to your wm's policies.
 
 ## Contributing
 ![Open PR](https://img.shields.io/github/issues-pr-raw/LinArcX/Kindd.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Kindd.svg?style=flat-square)
