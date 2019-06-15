@@ -58,3 +58,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 ############### I18n ###############
 #TRANSLATIONS = i18n/persian.ts
+
+### Users can run the programme from file manager.
+QMAKE_LFLAGS += -no-pie
+
