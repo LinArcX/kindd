@@ -2,7 +2,7 @@ import QtQuick 2.11
 import QtQuick.Controls 2.4
 import linarcx.kindd.CreateISO 1.0
 import linarcx.kindd.Settings 1.0
-import QtMultimedia 5.8
+import Qt.labs.platform 1.1
 
 import "qrc:/components/qml/"
 import "qrc:/components/js/Constants.js" as CONS
@@ -26,15 +26,23 @@ Page {
         source: "qrc:/fonts/Amatic.ttf"
     }
 
-    SoundEffect {
-        id: sndPlug
-        source: "qrc:/sounds/plug.wav"
-    }
+    SystemTrayIcon {
+        id: sysTray
+        visible: false
+        icon.mask: true
+        icon.source: "qrc:/images/done.svg"
+        onMessageClicked: sysTray.hide()
+     }
 
-    SoundEffect {
-        id: sndUnPlug
-        source: "qrc:/sounds/unplug.wav"
-    }
+//    SoundEffect {
+//        id: sndPlug
+//        source: "qrc:/sounds/plug.wav"
+//    }
+
+//    SoundEffect {
+//        id: sndUnPlug
+//        source: "qrc:/sounds/unplug.wav"
+//    }
 
     //----------------- Popup ------------------//
     LinArcxPopUp {
@@ -468,6 +476,7 @@ Page {
     Connections {
         target: qSettings
         onBlockSizeReady: {
+//            console.log(blockSize)
             txtBlockSize.text = blockSize
         }
     }
@@ -484,11 +493,16 @@ Page {
         }
         onFinished: {
             txtProgress.text = finished
-            console.log(finished)
             txtProgress.visible = false
             pgBar.visible = false
-            qProcessDone.visible = true
-            seqAnimProcessDone.start()
+            btnCreateISO.enabled = true
+
+            sysTray.visible = true;
+            sysTray.showMessage("Congratulation!", "The .iso file successfully writed into disk.")
+
+            //qProcessDone.visible = true
+            //seqAnimProcessDone.start()
+            //console.log(finished)
         }
         onModelReady: {
             cmbTargetPath.model.clear()
@@ -508,14 +522,14 @@ Page {
             dev = data
             qDeviceAddedAlert.visible = true
             seqAnimDeviceAdded.start()
-            sndPlug.play()
+            //sndPlug.play()
         }
 
         onDeviceRemoved: {
             dev = data
             qDeviceRemovedAlert.visible = true
             seqAnimDeviceRemoved.start()
-            sndUnPlug.play()
+            //sndUnPlug.play()
         }
 
         onModelChangedReady: {
@@ -655,4 +669,3 @@ Page {
 //                duration: 100
 //            }
 //        }
-

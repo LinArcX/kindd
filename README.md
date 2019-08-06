@@ -35,7 +35,6 @@ A kindful dd gui written in qt quick :)
 |[qt5-multimedia](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|
 |[qt5-quickcontrols](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols/)|
 |[qt5-quickcontrols2](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|
-|[qt5-graphicaleffects](https://www.archlinux.org/packages/extra/x86_64/qt5-graphicaleffects/)
 
 3. clone the repo:
 
@@ -54,9 +53,15 @@ A kindful dd gui written in qt quick :)
     `./kindd`
 
 ### Tip for Windows-manager's Users
-**Kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install `polkit-gnome` first, and then paste this line into __i3/config__ file:
+**Kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install an agent. I prefer to use `polkit-gnome`. After downloading this packges, paste this line into __i3/config__ file:
 
+#### Arch users
+Just paste this line into your i3.config:
 `exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
+
+#### Void users
+Just paste this line into your i3.config:
+`exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &`
 
 Hint: I don't have awesome or other wms. So you should put above line in your startup config according to your wm's policies.
 

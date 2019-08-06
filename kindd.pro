@@ -1,10 +1,10 @@
 ############### General ###############
-QT += core qml quick quickcontrols2
+QT += core qml quick quickcontrols2 widgets
 CONFIG += c++11
 
 VERSION = $$system(git log --pretty=format:'%h' -n 1)
 DEFINES += APP_VER=\\\"$$VERSION\\\"
-DEFINES += QT_DEPRECATED_WARNINGS
+DEFINES += QT_DEPRECATED_WARNINGS QT_NO_DEBUG_OUTPUT QT_NO_WARNING_OUTPU
 
 ############### Compiler Flgas ###############
 QMAKE_CXXFLAGS_WARN_OFF -= -Wunused-parameter

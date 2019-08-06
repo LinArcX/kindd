@@ -197,7 +197,7 @@ int Settings::fontSizeIndex()
     return fontSizes().indexOf(qv);
 }
 
-int Settings::loadBlockSize()
+void Settings::loadBlockSize()
 {
     QSettings settings(COMPANY_NAME, APP_NAME);
     settings.beginGroup(APP_GROUP);

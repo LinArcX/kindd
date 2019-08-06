@@ -16,13 +16,6 @@ Dispatcher::Dispatcher(QGuiApplication& mApp, QObject* parent)
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
 
-    //    QFontDatabase::addApplicationFont(":/fonts/Adele.ttf");
-    //    qApp->setFont(_font);
-    //    QFont font("Adele");
-    //    font.setStyleHint(QFont::Monospace);
-    //    QGuiApplication::setFont(font);
-    //    qDebug() << QGuiApplication::font();
-
     Settings& settings = *new Settings();
     settings.loadAppStyle();
     settings.loadFontFamily();
