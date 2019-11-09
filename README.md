@@ -23,6 +23,9 @@ A kindful dd gui written in qt quick :)
 2. release version
 `trizen -S kindd`
 
+### Void(in progress)
+https://github.com/void-linux/void-packages/pull/14780
+
 ### Build From Source
 2. Install these dependencies first:
 
