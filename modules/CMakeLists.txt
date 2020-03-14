@@ -8,6 +8,9 @@ target_include_directories(dispatcher PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/dispat
 target_compile_definitions(dispatcher PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(dispatcher PRIVATE Qt5::Core Qt5::Quick Qt5::Qml)
 
+target_link_libraries(dispatcher PUBLIC create_iso)
+target_link_libraries(dispatcher PUBLIC settings)
+
 add_library(
     qdevice_watcher
     SHARED

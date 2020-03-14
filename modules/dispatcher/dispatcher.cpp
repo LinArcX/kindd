@@ -5,10 +5,11 @@
 #include <QQmlContext>
 #include <QtQuickControls2/QQuickStyle>
 #include <QTranslator>
-#include "dispatcher.h"
 #include <create_iso/create_iso.h>
 #include <settings/settings.h>
-#include <dispatcher/dispatcher_macro.h>
+
+#include "dispatcher.h"
+#include "dispatcher_macro.h"
 
 Dispatcher::Dispatcher(QGuiApplication& mApp, QObject* parent)
     : QObject(parent)

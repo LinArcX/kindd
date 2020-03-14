@@ -1,0 +1,5 @@
+2.1.0
+New:
+    1. Replace qmake with cmake due to qmake issues for cross compilation on void linux.
+    2. Now i'm using neovim+cmake+direnv+nix to develop kind. Bye bye qt-creator :)
+    3. Remove screenshots from repo and move them to new gist repo.
