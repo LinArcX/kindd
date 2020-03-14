@@ -50,10 +50,10 @@
         <file alias="hiddenFolder.svg">../images/hiddenFolder.svg</file>
     </qresource>
     <qresource prefix="/components">
-        <file alias="qml/LinArcxTableView.qml">./components/LinArcxTableView.qml</file>
-        <file alias="qml/LinArcxDialog.qml">./components/LinArcxDialog.qml</file>
-        <file alias="qml/LinArcxPopUp.qml">./components/LinArcxPopUp.qml</file>
-        <file alias="qml/LinArcXHLine.qml">./components/LinarcxHLine.qml</file>
+        <file alias="qml/LinArcxTableView.qml">components/LinArcxTableView.qml</file>
+        <file alias="qml/LinArcxDialog.qml">components/LinArcxDialog.qml</file>
+        <file alias="qml/LinArcxPopUp.qml">components/LinArcxPopUp.qml</file>
+        <file alias="qml/LinArcXHLine.qml">components/LinarcxHLine.qml</file>
         <file alias="js/MenuCreator.js">../js/MenuCreator.js</file>
         <file alias="js/ElementCreator.js">../js/ElementCreator.js</file>
         <file alias="js/CanvasUtil.js">../js/CanvasUtil.js</file>

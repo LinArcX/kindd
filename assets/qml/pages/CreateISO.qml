@@ -130,7 +130,7 @@ Page {
             header: "1. Choose Block Size"
             anchors.top: parent.top
             anchors.topMargin: 10
-            qLeftMargin: 25
+            //qLeftMargin: 25
         }
 
         Image {
@@ -175,7 +175,7 @@ Page {
             header: "2. Choose Input .iso file"
             anchors.top: txtBlockSize.bottom
             anchors.topMargin: 30
-            qLeftMargin: 25
+            //qLeftMargin: 25
         }
 
         Image {
@@ -221,7 +221,7 @@ Page {
             header: "3. Choose Target Path"
             anchors.top: lblIsoPath.bottom
             anchors.topMargin: 10
-            qLeftMargin: 25
+            //qLeftMargin: 25
         }
 
         Image {

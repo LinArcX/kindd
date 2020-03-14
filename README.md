@@ -8,6 +8,7 @@
 1. Provide a modern/simple/safe UI for dd command.
 2. Create bootable USB withouth worring!
 
+## Installation
 ### Arch
 - git version
 `trizen -S kindd-git`
@@ -19,28 +20,33 @@
 https://github.com/void-linux/void-packages/pull/14780
 
 ### Build From Source
-2. Install these dependencies first:
+First Install these dependencies first:
 
-|Dependencies||
-|-----|:-----:|
-|[git](https://www.archlinux.org/packages/extra/x86_64/git/)|
-|[coreutils](https://www.archlinux.org/packages/core/x86_64/coreutils/)|
-|[polkit](https://www.archlinux.org/packages/extra/x86_64/polkit/)|
-|[qt5-base](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|
-|[qt5-multimedia](https://www.archlinux.org/packages/extra/x86_64/qt5-base/)|
-|[qt5-quickcontrols](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols/)|
-|[qt5-quickcontrols2](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|
+#### Dependencies
+runtime:
+- qt5-svg
+- qt5-quickcontrols
+- qt5-quickcontrols2
+- qt5-graphicaleffects
+- polkit-gnome
 
-3. clone the repo:
-    `git clone https://github.com/LinArcX/Kindd/`
+build dependencies:
+- cmake
+- pkg-config
+- qt5-devel
+- qt5-declarative-devel
+- qt5-quickcontrols2-devel
 
-4. go to cloned directory and make the project with qmake build tools:
-    `cd Kindd`
-    `qmake`
-    `make`
+Then clone and build the project:
 
-5. run the application:
-    `./kindd`
+```
+git clone https://github.com/LinArcX/kindd/
+cd kindd; mkdir build; cd build
+cmake ..; make
+```
+
+And finally, run it:
+`cd ..; build/kindd`
 
 ### Tip for Windows-manager's Users
 **Kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install an agent. I prefer to use `polkit-gnome`. After downloading this packges, paste this line into __i3/config__ file:
