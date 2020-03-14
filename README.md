@@ -11,9 +11,11 @@
 ## Installation
 ### Arch
 - git version
+
 `trizen -S kindd-git`
 
 - release version
+
 `trizen -S kindd`
 
 ### Void (WIP)
@@ -23,7 +25,7 @@ https://github.com/void-linux/void-packages/pull/14780
 First Install these dependencies first:
 
 #### Dependencies
-runtime:
+runtime dependencies:
 - qt5-svg
 - qt5-quickcontrols
 - qt5-quickcontrols2
@@ -46,20 +48,23 @@ cmake ..; make
 ```
 
 And finally, run it:
+
 `cd ..; build/kindd`
 
 ### Tip for Windows-manager's Users
-**Kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install an agent. I prefer to use `polkit-gnome`. After downloading this packges, paste this line into __i3/config__ file:
+**kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install an agent. I prefer to use `polkit-gnome`. After downloading this packges, paste this line into __i3/config__ file:
 
 #### Arch users
 Just paste this line into your i3.config:
+
 `exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
 
 #### Void users
-Just paste this line into your i3.config:
+Just paste this line into your `i3.config`:
+
 `exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &`
 
-Hint: I don't have awesome or other wms. So you should put above line in your startup config according to your wm's policies.
+Hint: I don't have awesome or other wms. So you should change above lines according to your needs.
 
 ## License
 ![License](https://img.shields.io/github/license/LinArcX/kindd.svg)
