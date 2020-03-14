@@ -1,6 +1,5 @@
 add_library(
     dispatcher
-    SHARED
     dispatcher/dispatcher.h
     dispatcher/dispatcher.cpp
     dispatcher/dispatcher_macro.h)
@@ -12,7 +11,6 @@ target_link_libraries(dispatcher PUBLIC settings)
 
 add_library(
     qdevice_watcher
-    SHARED
     qdevice_watcher/qdevice_watcher.h
     qdevice_watcher/qdevice_watcher.cpp
     qdevice_watcher/qdevice_watcher_p.h
@@ -26,7 +24,6 @@ target_link_libraries(qdevice_watcher PRIVATE Qt5::Core Qt5::Quick Qt5::Network)
 
 add_library(
     create_iso
-    SHARED
     create_iso/create_iso.h
     create_iso/create_iso.cpp
     create_iso/create_iso_macro.h)
@@ -38,7 +35,6 @@ target_link_libraries(create_iso PUBLIC utility)
 
 add_library(
     settings
-    SHARED
     settings/settings.h
     settings/settings.cpp
     settings/settings_macro.h)
@@ -48,7 +44,6 @@ target_link_libraries(settings PRIVATE Qt5::Core Qt5::Widgets Qt5::Quick Qt5::Qm
 
 add_library(
     utility
-    SHARED
     utility/utility.h
     utility/utility.cpp
     utility/utility_macro.h

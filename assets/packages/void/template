@@ -1,0 +1,23 @@
+# Template file for 'kindd'
+pkgname=kindd
+version=2.1.0
+revision=1
+wrksrc="kindd-${version}"
+build_style=cmake
+hostmakedepends="cmake pkg-config"
+makedepends="qt5-devel qt5-declarative-devel qt5-quickcontrols2-devel qt5-svg-devel"
+depends="polkit-gnome qt5-quickcontrols qt5-quickcontrols2 qt5-graphicaleffects  qt5-declarative qt5-svg"
+short_desc="Kindful dd, written by qt-quick"
+maintainer="linarcx <linarcx@gmail.com>"
+license="GPL-3.0-only"
+homepage="https://github.com/LinArcX/kindd"
+distfiles="${homepage}/archive/${version}.tar.gz"
+checksum=ee9c2aa9aaad59958b4d5946ff7adfd2aa89d9789e7e217486ee8858be056f1e
+nopie=yes
+
+do_install() {
+    echo ${wrksrc}
+	vbin release/kindd
+	vinstall assets/appconf/kindd.svg 644 usr/share/pixmaps
+	vinstall assets/appconf/kindd.desktop 644 usr/share/applications
+}
