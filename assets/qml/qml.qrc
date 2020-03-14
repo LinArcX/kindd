@@ -1,8 +1,8 @@
 <RCC>
     <qresource prefix="/pages">
-        <file alias="main.qml">modules/pages/main.qml</file>
-        <file alias="CreateISO.qml">modules/pages/createISO/view/CreateISO.qml</file>
-        <file alias="Settings.qml">modules/pages/settings/view/Settings.qml</file>
+        <file alias="main.qml">main.qml</file>
+        <file alias="CreateISO.qml">pages/CreateISO.qml</file>
+        <file alias="Settings.qml">pages/Settings.qml</file>
     </qresource>
     <qresource prefix="/fonts">
         <file alias="Adele.ttf">../fonts/Adele.ttf</file>
@@ -21,8 +21,8 @@
         <file alias="Daywalker.ttf">../fonts/Daywalker.ttf</file>
     </qresource>
     <qresource prefix="/conf">
-        <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
-        <file alias="kindd.desktop">appconf/kindd.desktop</file>
+        <file alias="qtquickcontrols2.conf">../appconf/qtquickcontrols2.conf</file>
+        <file alias="kindd.desktop">../appconf/kindd.desktop</file>
     </qresource>
     <qresource prefix="/images">
         <file alias="done.svg">../images/done.svg</file>
@@ -50,23 +50,23 @@
         <file alias="hiddenFolder.svg">../images/hiddenFolder.svg</file>
     </qresource>
     <qresource prefix="/components">
-        <file alias="qml/LinArcxTableView.qml">../qml/LinArcxTableView.qml</file>
-        <file alias="qml/LinArcxDialog.qml">../qml/LinArcxDialog.qml</file>
-        <file alias="qml/LinArcxPopUp.qml">../qml/LinArcxPopUp.qml</file>
+        <file alias="qml/LinArcxTableView.qml">./components/LinArcxTableView.qml</file>
+        <file alias="qml/LinArcxDialog.qml">./components/LinArcxDialog.qml</file>
+        <file alias="qml/LinArcxPopUp.qml">./components/LinArcxPopUp.qml</file>
         <file alias="qml/LinArcXHLine.qml">./components/LinarcxHLine.qml</file>
         <file alias="js/MenuCreator.js">../js/MenuCreator.js</file>
         <file alias="js/ElementCreator.js">../js/ElementCreator.js</file>
         <file alias="js/CanvasUtil.js">../js/CanvasUtil.js</file>
-        <file alias="qml/ToolTiper.qml">../qml/ToolTiper.qml</file>
-        <file alias="qml/LinarcxToolTip.qml">../qml/LinarcxToolTip.qml</file>
-        <file alias="qml/LinarcxImageToolTiper.qml">../qml/LinarcxImageToolTiper.qml</file>
-        <file alias="qml/LinarcxLabel.qml">../qml/LinarcxLabel.qml</file>
-        <file alias="qml/LinarcxButton.qml">../qml/LinarcxButton.qml</file>
+        <file alias="qml/ToolTiper.qml">components/ToolTiper.qml</file>
+        <file alias="qml/LinarcxToolTip.qml">components/LinarcxToolTip.qml</file>
+        <file alias="qml/LinarcxImageToolTiper.qml">components/LinarcxImageToolTiper.qml</file>
+        <file alias="qml/LinarcxLabel.qml">components/LinarcxLabel.qml</file>
+        <file alias="qml/LinarcxButton.qml">components/LinarcxButton.qml</file>
         <file alias="js/Constants.js">../js/Constants.js</file>
     </qresource>
     <qresource prefix="/strings">
-        <file alias="SettingsStrings.js">../strings/SettingsStrings.js</file>
-        <file alias="CoreStrings.js">../strings/CoreStrings.js</file>
+        <file alias="SettingsStrings.js">../js/strings/SettingsStrings.js</file>
+        <file alias="CoreStrings.js">../js/strings/CoreStrings.js</file>
     </qresource>
     <qresource prefix="/sounds">
         <file alias="plug.wav">../sounds/plug.wav</file>

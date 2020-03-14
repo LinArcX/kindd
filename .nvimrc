@@ -24,30 +24,6 @@ let s:cmake_configure = s:cmake ." ". " -L .. | less && exit \n"
 let s:cmake_show_vars = s:cmake ." ". $C_COMPILER ." ". $CXX_COMPILER ." ". "..  -LAH | less && exit \n"
 let s:cmake_show_help = "cmake --help-full | less && exit \n"
 
-"coiustrpfs
-call quickui#menu#install('&Debugging', [
-            \ [ "&continue\tF(5)", 'call feedkeys("\<Plug>VimspectorContinue")' ],
-            \ [ "step-&over\tF(6)", 'call feedkeys("\<Plug>VimspectorStepOver")' ],
-            \ [ "step-&into\tF(7)", 'call feedkeys("\<Plug>VimspectorStepInto")' ],
-            \ [ "step-o&ut\tF(8)", 'call feedkeys("\<Plug>VimspectorStepOut")' ],
-            \ [ "&stop\tF(9)", 'call feedkeys("\<Plug>VimspectorStop")' ],
-            \ [ "&toggle-breakpoint\tF(10)", 'call feedkeys("\<Plug>VimspectorToggleBreakpoint")' ],
-            \ [ "&pause\tShift-p", 'call feedkeys("\<Plug>VimspectorPause")' ],
-            \ [ "&restart\tShift-r", 'call feedkeys("\<Plug>VimspectorRestart")' ],
-            \ [ "clo&se-debugger\tShift-s", ':call vimspector#Reset()' ],
-            \ ], 5000)
-
-"rutnpm
-call quickui#menu#install('&Test', [
-            \ [ "&run", 'GTestRun' ],
-            \ [ "run-&under-cursor", 'GTestRunUnderCursor' ],
-            \ [ "&toggle-enable", 'GTestToggleEnabled' ],
-            \ [ "&next", 'GTestNext' ],
-            \ [ "&previous", 'GTestPrev' ],
-            \ [ "ju&mp-to-test", 'GTestJump' ],
-            \ ], 5001)
-
-
 call quickui#menu#clear('P&roject')
 " dgmrc--ex--vfps--b
 call quickui#menu#install('P&roject', [
@@ -63,6 +39,29 @@ call quickui#menu#install('P&roject', [
             \ [ "cmake-help-&search", 'call SearchCmakeHelp()' ],
             \ [ "--", '' ],
             \ [ "nix-collect-gar&bage", 'call HTerminal(0.4, 300.0, "clear; nix-collect-garbage \n")' ],
+            \ ], 5000)
+
+"coiustrpfs
+call quickui#menu#install('&Debugging', [
+            \ [ "&continue\tF(5)", 'call feedkeys("\<Plug>VimspectorContinue")' ],
+            \ [ "step-&over\tF(6)", 'call feedkeys("\<Plug>VimspectorStepOver")' ],
+            \ [ "step-&into\tF(7)", 'call feedkeys("\<Plug>VimspectorStepInto")' ],
+            \ [ "step-o&ut\tF(8)", 'call feedkeys("\<Plug>VimspectorStepOut")' ],
+            \ [ "&stop\tF(9)", 'call feedkeys("\<Plug>VimspectorStop")' ],
+            \ [ "&toggle-breakpoint\tF(10)", 'call feedkeys("\<Plug>VimspectorToggleBreakpoint")' ],
+            \ [ "&pause\tShift-p", 'call feedkeys("\<Plug>VimspectorPause")' ],
+            \ [ "&restart\tShift-r", 'call feedkeys("\<Plug>VimspectorRestart")' ],
+            \ [ "clo&se-debugger\tShift-s", ':call vimspector#Reset()' ],
+            \ ], 5001)
+
+"rutnpm
+call quickui#menu#install('&Test', [
+            \ [ "&run", 'GTestRun' ],
+            \ [ "run-&under-cursor", 'GTestRunUnderCursor' ],
+            \ [ "&toggle-enable", 'GTestToggleEnabled' ],
+            \ [ "&next", 'GTestNext' ],
+            \ [ "&previous", 'GTestPrev' ],
+            \ [ "ju&mp-to-test", 'GTestJump' ],
             \ ], 5002)
 
 "casmgn--pd--eb--xfoiat

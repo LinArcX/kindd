@@ -12,10 +12,15 @@ add_library(
     qdevice_watcher
     SHARED
     qdevice_watcher/qdevice_watcher.h
-    qdevice_watcher/qdevice_watcher.cpp)
+    qdevice_watcher/qdevice_watcher.cpp
+    qdevice_watcher/qdevice_watcher_p.h
+    qdevice_watcher/qdevicewatcher_linux.cpp
+    qdevice_watcher/qdevicewatcher_mac.cpp
+    qdevice_watcher/qdevicewatcher_win32.cpp
+    qdevice_watcher/qdevicewatcher_wince.cpp)
 target_include_directories(qdevice_watcher PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/qdevice_watcher")
 target_compile_definitions(qdevice_watcher PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-target_link_libraries(qdevice_watcher PRIVATE Qt5::Core Qt5::Quick )
+target_link_libraries(qdevice_watcher PRIVATE Qt5::Core Qt5::Quick Qt5::Network)
 
 
 add_library(

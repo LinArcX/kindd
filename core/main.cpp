@@ -1,5 +1,5 @@
-#include <dispatcher/dispatcher.h>
 #include <QApplication>
+#include <dispatcher.h>
 
 int main(int argc, char* argv[])
 {

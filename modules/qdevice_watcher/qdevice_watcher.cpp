@@ -17,8 +17,8 @@
     Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 ******************************************************************************/
 
-#include "qdevicewatcher.h"
-#include "qdevicewatcher_p.h"
+#include "qdevice_watcher.h"
+#include "qdevice_watcher_p.h"
 
 QDeviceWatcher::QDeviceWatcher(QObject* parent)
 	:QObject(parent),running(false),d_ptr(new QDeviceWatcherPrivate)

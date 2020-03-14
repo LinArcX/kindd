@@ -6,7 +6,7 @@
         "name": "<name>",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceRoot}/debug/zi",
+        "program": "${workspaceRoot}/debug/kindd",
         "cwd": "${workspaceRoot}",
         "externalConsole": true,
         "stopAtEntry": true,
@@ -19,10 +19,9 @@
         "name": "<name>: Attach",
         "type": "cppdbg",
         "request": "attach",
-        "program": "${workspaceRoot}/debug/zi",
+        "program": "${workspaceRoot}/debug/kindd",
         "MIMode": "gdb"
       }
     }
   }
 }
-

@@ -20,8 +20,8 @@
 /*!
  * http://msdn.microsoft.com/en-us/library/aa447466.aspx
 */
-#include "qdevicewatcher.h"
-#include "qdevicewatcher_p.h"
+#include "qdevice_watcher.h"
+#include "qdevice_watcher_p.h"
 
 #ifdef Q_OS_WINCE
 #include <msgqueue.h>

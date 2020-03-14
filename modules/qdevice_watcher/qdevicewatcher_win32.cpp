@@ -18,8 +18,8 @@
 ******************************************************************************/
 
 
-#include "qdevicewatcher.h"
-#include "qdevicewatcher_p.h"
+#include "qdevice_watcher.h"
+#include "qdevice_watcher_p.h"
 
 //TODO: If wince works, use Q_OS_WIN
 #ifdef Q_OS_WIN32
