@@ -12,8 +12,7 @@ maintainer="linarcx <linarcx@gmail.com>"
 license="GPL-3.0-only"
 homepage="https://github.com/LinArcX/kindd"
 distfiles="${homepage}/archive/${version}.tar.gz"
-checksum=ee9c2aa9aaad59958b4d5946ff7adfd2aa89d9789e7e217486ee8858be056f1e
-nopie=yes
+checksum=907738b3325e190acf1ee57a990cdcd5a6b67aad3e147cca614cb0b8fd3681b5
 
 do_install() {
     echo ${wrksrc}

@@ -72,7 +72,7 @@ void Settings::loadAppStyle()
     QSettings settings(COMPANY_NAME, APP_NAME);
     settings.beginGroup(APP_GROUP);
     QString mStyle = qvariant_cast<QString>(settings.value(STYLE, DEFAULT_STYLE));
-    //QQuickStyle::setStyle(mStyle);
+    QQuickStyle::setStyle(mStyle);
     settings.endGroup();
 }
 
