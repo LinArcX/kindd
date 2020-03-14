@@ -17,7 +17,7 @@ let s:make = "cd build/; make; \n"
 let s:update = "update | w |"
 let s:ccc = "clear; cd build; cmake"
 let s:make_debug   = s:cmake ." ". $CMAKE_ARGS ." ". $CMAKE_VERBOSE ." ". $CMAKE_EXPORT_JSON ." ". $C_COMPILER ." ". $CXX_COMPILER ." ". $CMAKE_DEBUG . s:cd_top . s:link_json . s:make
-let s:make_release = s:cmake ." ". $CMAKE_ARGS ." ". $CMAKE_VERBOSE ." ". $CMAKE_EXPORT_JSON ." ". $C_COMPILER ." ". $CXX_COMPILER ." ". $CMAKE_RELEASE . s:cd_top . s:link_json . s:make
+let s:make_release = s:cmake ." ". $CMAKE_ARGS ." ". $CMAKE_EXPORT_JSON ." ". $C_COMPILER ." ". $CXX_COMPILER ." ". $CMAKE_RELEASE . s:cd_top . s:link_json . s:make
 let s:project_clear = "clear; rm -rfv build/**; rm -rfv debug/**; rm -rfv release/**; rm -rfv compile_commands.json; \n"
 
 let s:cmake_configure = s:cmake ." ". " -L .. | less && exit \n"

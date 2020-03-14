@@ -1,29 +1,21 @@
-# Kindd ![Language](https://img.shields.io/github/languages/top/LinArcX/Kindd.svg?style=flat-square) ![RepoSize](https://img.shields.io/github/repo-size/LinArcX/Kindd.svg?style=flat-square) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/Kindd.svg?colorB=green&style=flat-square)
-A kindful dd gui written in qt quick :)
-
-## Preview
-!["gnulium"](shots/2.0.0/init.png "Kindd")
+<h1 align="center">
+	<img width="900" src="./screenshot.png" alt="kindd">
+    <br/>
+    <h4 align="center">Creating bootable USB with kindd</h4>
+</h1>
 
 ## Purposes
 1. Provide a modern/simple/safe UI for dd command.
-2. You can create bootable device with kindd.
-
-##
-|Landing Page|Process|Settings|
-|:-----:|:-----:|:-----:|
-|![](./shots/2.0.0/init.png)|![](./shots/2.0.0/process.png)|![](./shots/2.0.0/settings.png)|![](./shots/2.0.0/done.png)|
-|Click image to enlarge|Click image to enlarge| Click image to enlarge| Click image to enlarge|
-
-## Installation
+2. Create bootable USB withouth worring!
 
 ### Arch
-1. git version
+- git version
 `trizen -S kindd-git`
 
-2. release version
+- release version
 `trizen -S kindd`
 
-### Void(in progress)
+### Void (WIP)
 https://github.com/void-linux/void-packages/pull/14780
 
 ### Build From Source
@@ -40,19 +32,14 @@ https://github.com/void-linux/void-packages/pull/14780
 |[qt5-quickcontrols2](https://www.archlinux.org/packages/extra/x86_64/qt5-quickcontrols2/)|
 
 3. clone the repo:
-
     `git clone https://github.com/LinArcX/Kindd/`
 
 4. go to cloned directory and make the project with qmake build tools:
-
     `cd Kindd`
-
     `qmake`
-
     `make`
 
 5. run the application:
-
     `./kindd`
 
 ### Tip for Windows-manager's Users
@@ -68,34 +55,5 @@ Just paste this line into your i3.config:
 
 Hint: I don't have awesome or other wms. So you should put above line in your startup config according to your wm's policies.
 
-## Contributing
-![Open PR](https://img.shields.io/github/issues-pr-raw/LinArcX/Kindd.svg?style=flat-square) ![Closed PR](https://img.shields.io/github/issues-pr-closed/LinArcX/Kindd.svg?style=flat-square)
-1. Fork it!
-2. Create your feature branch: `git checkout -b my-new-feature`
-3. Commit your changes: `git commit -am 'Add some feature'`
-4. Push to the branch: `git push origin my-new-feature`
-5. Submit a pull request :D
-
-
-## Bugs
-![Open Issues](https://img.shields.io/github/issues-raw/LinArcX/Kindd.svg?style=flat-square) ![Issues](https://img.shields.io/github/issues-closed-raw/LinArcX/Kindd.svg?style=flat-square)
-
-Bugs should be reported [here](https://github.com/LinArcX/Kindd/issues) on the Github issues page.
-
-
-## Credits
-LinArcX
-Github Repo:[https://github.com/LinArcX](https://github.com/LinArcX)
-
-E-Mail:linarcx@gmail.com
-
-<h1 align="center">
-	<img width="200" src="appconf/kindd.svg" alt="Kindd">
-	<br>
-	<br>
-	<p>kindful + dd</p>
-</h1>
-
 ## License
-![License](https://img.shields.io/github/license/LinArcX/Kindd.svg?style=flat-square)
-
+![License](https://img.shields.io/github/license/LinArcX/kindd.svg)
