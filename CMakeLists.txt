@@ -1,0 +1,24 @@
+cmake_minimum_required(VERSION 3.12)
+
+SET(NAME kindd)
+project(${NAME} LANGUAGES CXX)
+project(${NAME} VERSION 1.0.0)
+
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+SET(CMAKE_C_STANDARD 11)
+set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+FIND_PACKAGE(PkgConfig REQUIRED)
+PKG_CHECK_MODULES(neodm REQUIRED Qt5Core Qt5Gui Qt5Widgets Qt5Quick Qt5QuickControls2 Qt5Qml Qt5Svg Qt5OpenGL Qt5Network)
+find_package(Qt5 COMPONENTS Core Gui Widgets Quick QuickControls2 Qml Svg OpenGL Network REQUIRED)
+
+add_subdirectory(core)
+add_subdirectory(modules)
+
+set_target_properties(${NAME} PROPERTIES
+  RUNTIME_OUTPUT_DIRECTORY_DEBUG   ${CMAKE_SOURCE_DIR}/debug
+  RUNTIME_OUTPUT_DIRECTORY_RELEASE ${CMAKE_SOURCE_DIR}/release
+)

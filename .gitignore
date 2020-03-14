@@ -1,2 +1,11 @@
-/garbages/*
-kindd.pro.user
+/.clangd/*
+/garbage/*
+
+/build/*
+/debug/*
+/release/*
+
+/test/build/*
+
+CMakeLists.txt.user
+compile_commands.json

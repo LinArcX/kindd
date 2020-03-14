@@ -1,0 +1,75 @@
+<RCC>
+    <qresource prefix="/pages">
+        <file alias="main.qml">modules/pages/main.qml</file>
+        <file alias="CreateISO.qml">modules/pages/createISO/view/CreateISO.qml</file>
+        <file alias="Settings.qml">modules/pages/settings/view/Settings.qml</file>
+    </qresource>
+    <qresource prefix="/fonts">
+        <file alias="Adele.ttf">../fonts/Adele.ttf</file>
+        <file alias="CaviarDreams.ttf">../fonts/CaviarDreams.ttf</file>
+        <file alias="FontAwesome.ttf">../fonts/FontAwesome.ttf</file>
+        <file alias="RadioSpace.ttf">../fonts/RadioSpace.ttf</file>
+        <file alias="Shabnam.ttf">../fonts/Shabnam.ttf</file>
+        <file alias="Vazir.ttf">../fonts/Vazir.ttf</file>
+        <file alias="XMYekan.ttf">../fonts/XMYekan.ttf</file>
+        <file alias="Titillium.otf">../fonts/Titillium.otf</file>
+        <file alias="Exo.otf">../fonts/Exo.otf</file>
+        <file alias="Aller.ttf">../fonts/Aller.ttf</file>
+        <file alias="Amatic.ttf">../fonts/Amatic.ttf</file>
+        <file alias="AlexBrush.ttf">../fonts/AlexBrush.ttf</file>
+        <file alias="BeautifulCreatures.ttf">../fonts/BeautifulCreatures.ttf</file>
+        <file alias="Daywalker.ttf">../fonts/Daywalker.ttf</file>
+    </qresource>
+    <qresource prefix="/conf">
+        <file alias="qtquickcontrols2.conf">appconf/qtquickcontrols2.conf</file>
+        <file alias="kindd.desktop">appconf/kindd.desktop</file>
+    </qresource>
+    <qresource prefix="/images">
+        <file alias="done.svg">../images/done.svg</file>
+        <file alias="kindd.svg">../images/kindd.svg</file>
+        <file alias="warning.svg">../images/warning.svg</file>
+        <file alias="palette.svg">../images/palette.svg</file>
+        <file alias="text.svg">../images/text.svg</file>
+        <file alias="fontSize.svg">../images/fontSize.svg</file>
+        <file alias="block.svg">../images/block.svg</file>
+        <file alias="createISO.svg">../images/createISO.svg</file>
+        <file>../images/002-iso.svg</file>
+        <file>../images/003-iso-1.svg</file>
+        <file>../images/004-iso-2.svg</file>
+        <file>../images/005-folder.svg</file>
+        <file>../images/008-settings.svg</file>
+        <file>../images/011-settings-3.svg</file>
+        <file alias="settings.svg">../images/settings.svg</file>
+        <file alias="listDevices_.svg">../images/listDevices_.svg</file>
+        <file>../images/001-database.svg</file>
+        <file alias="listDevices.svg">../images/listDevices.svg</file>
+        <file>../images/003-folder-1.svg</file>
+        <file>../images/004-document.svg</file>
+        <file>../images/005-document-1.svg</file>
+        <file alias="bird.png">../images/bird.png</file>
+        <file alias="hiddenFolder.svg">../images/hiddenFolder.svg</file>
+    </qresource>
+    <qresource prefix="/components">
+        <file alias="qml/LinArcxTableView.qml">../qml/LinArcxTableView.qml</file>
+        <file alias="qml/LinArcxDialog.qml">../qml/LinArcxDialog.qml</file>
+        <file alias="qml/LinArcxPopUp.qml">../qml/LinArcxPopUp.qml</file>
+        <file alias="qml/LinArcXHLine.qml">./components/LinarcxHLine.qml</file>
+        <file alias="js/MenuCreator.js">../js/MenuCreator.js</file>
+        <file alias="js/ElementCreator.js">../js/ElementCreator.js</file>
+        <file alias="js/CanvasUtil.js">../js/CanvasUtil.js</file>
+        <file alias="qml/ToolTiper.qml">../qml/ToolTiper.qml</file>
+        <file alias="qml/LinarcxToolTip.qml">../qml/LinarcxToolTip.qml</file>
+        <file alias="qml/LinarcxImageToolTiper.qml">../qml/LinarcxImageToolTiper.qml</file>
+        <file alias="qml/LinarcxLabel.qml">../qml/LinarcxLabel.qml</file>
+        <file alias="qml/LinarcxButton.qml">../qml/LinarcxButton.qml</file>
+        <file alias="js/Constants.js">../js/Constants.js</file>
+    </qresource>
+    <qresource prefix="/strings">
+        <file alias="SettingsStrings.js">../strings/SettingsStrings.js</file>
+        <file alias="CoreStrings.js">../strings/CoreStrings.js</file>
+    </qresource>
+    <qresource prefix="/sounds">
+        <file alias="plug.wav">../sounds/plug.wav</file>
+        <file alias="unplug.wav">../sounds/unplug.wav</file>
+    </qresource>
+</RCC>
