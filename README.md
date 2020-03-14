@@ -1,5 +1,5 @@
 <h1 align="center">
-	<img width="900" src="./screenshot.png" alt="kindd">
+    <a href="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"><img src="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"></a>
     <br/>
     <h4 align="center">Creating bootable USB with kindd</h4>
 </h1>
