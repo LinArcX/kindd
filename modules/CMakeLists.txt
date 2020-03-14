@@ -7,7 +7,6 @@ add_library(
 target_include_directories(dispatcher PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/dispatcher")
 target_compile_definitions(dispatcher PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(dispatcher PRIVATE Qt5::Core Qt5::Quick Qt5::Qml)
-
 target_link_libraries(dispatcher PUBLIC create_iso)
 target_link_libraries(dispatcher PUBLIC settings)
 
@@ -25,7 +24,6 @@ target_include_directories(qdevice_watcher PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/q
 target_compile_definitions(qdevice_watcher PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(qdevice_watcher PRIVATE Qt5::Core Qt5::Quick Qt5::Network)
 
-
 add_library(
     create_iso
     SHARED
@@ -35,6 +33,8 @@ add_library(
 target_include_directories(create_iso PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/create_iso")
 target_compile_definitions(create_iso PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
 target_link_libraries(create_iso PRIVATE Qt5::Core Qt5::Quick )
+target_link_libraries(create_iso PUBLIC qdevice_watcher)
+target_link_libraries(create_iso PUBLIC utility)
 
 add_library(
     settings
