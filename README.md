@@ -1,9 +1,9 @@
 <h4 align="center">
-    <img src="https://img.shields.io/travis/LinArcX/kindd"/>  <img src="https://img.shields.io/github/tag/LinArcX/kindd.svg?colorB=green"/>  <img src="https://img.shields.io/github/repo-size/LinArcX/kindd.svg"/>  <img src="https://img.shields.io/github/languages/top/LinArcX/kindd.svg"/>
+    <img src="assets/appconf/kindd.svg" align="center" width="100"/>
 </h4>
 
 <h4 align="center">
-    <img src="assets/appconf/kindd.svg" align="center" width="100"/>
+    <img src="https://img.shields.io/travis/LinArcX/kindd"/>  <img src="https://img.shields.io/github/tag/LinArcX/kindd.svg?colorB=green"/>  <img src="https://img.shields.io/github/repo-size/LinArcX/kindd.svg"/>  <img src="https://img.shields.io/github/languages/top/LinArcX/kindd.svg"/>
 </h4>
 
 <h1 align="center">
