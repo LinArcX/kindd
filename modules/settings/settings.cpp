@@ -3,15 +3,15 @@
 #include <QFontDatabase>
 #include <QGuiApplication>
 #include <QProcess>
-#include <QtQuickControls2/QQuickStyle>
 #include <QSettings>
 #include <QString>
 #include <QStringList>
+#include <QtQuickControls2/qquickstyle.h>
 #include <sys/utsname.h>
 
-#include <dispatcher/dispatcher.h>
 #include "settings.h"
 #include "settings_macro.h"
+#include <dispatcher/dispatcher.h>
 
 using namespace std;
 
