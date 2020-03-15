@@ -40,7 +40,7 @@ add_library(
     settings/settings_macro.h)
 target_include_directories(settings PUBLIC "${CMAKE_CURRENT_SOURCE_DIR}/settings")
 target_compile_definitions(settings PRIVATE $<$<OR:$<CONFIG:Debug>,$<CONFIG:RelWithDebInfo>>:QT_QML_DEBUG>)
-target_link_libraries(settings PRIVATE Qt5::Core Qt5::Widgets Qt5::Quick Qt5::Qml)
+target_link_libraries(settings PRIVATE Qt5::Core Qt5::Widgets Qt5::Quick Qt5::Qml Qt5::QuickControls2)
 
 add_library(
     utility
