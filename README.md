@@ -1,3 +1,6 @@
+# [<img src="assets/appconf/kindd.svg" align="left" width="100"/>](assets/appconf/kindd.svg) ![Travis (.org)](https://img.shields.io/travis/LinArcX/kindd) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/kindd.svg?colorB=green)
+![RepoSize](https://img.shields.io/github/repo-size/LinArcX/kindd.svg) ![Language](https://img.shields.io/github/languages/top/LinArcX/kindd.svg)
+
 <h1 align="center">
     <a href="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"><img src="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"></a>
     <br/>
@@ -9,6 +12,9 @@
 2. Create bootable USB withouth worring!
 
 ## Installation
+### Void
+`sudo xbps-install -S kindd`
+
 ### Arch
 - git version
 
@@ -17,9 +23,6 @@
 - release version
 
 `trizen -S kindd`
-
-### Void (WIP)
-https://github.com/void-linux/void-packages/pull/14780
 
 ### Build From Source
 First Install these dependencies first:
