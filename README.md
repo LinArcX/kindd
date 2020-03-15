@@ -1,5 +1,10 @@
-# [<img src="assets/appconf/kindd.svg" align="left" width="100"/>](assets/appconf/kindd.svg) ![Travis (.org)](https://img.shields.io/travis/LinArcX/kindd) ![Latest Tag](https://img.shields.io/github/tag/LinArcX/kindd.svg?colorB=green)
-![RepoSize](https://img.shields.io/github/repo-size/LinArcX/kindd.svg) ![Language](https://img.shields.io/github/languages/top/LinArcX/kindd.svg)
+<h4 align="center">
+    <img src="https://img.shields.io/travis/LinArcX/kindd"/>  <img src="https://img.shields.io/github/tag/LinArcX/kindd.svg?colorB=green"/>  <img src="https://img.shields.io/github/repo-size/LinArcX/kindd.svg"/>  <img src="https://img.shields.io/github/languages/top/LinArcX/kindd.svg"/>
+</h4>
+
+<h4 align="center">
+    <img src="assets/appconf/kindd.svg" align="center" width="100"/>
+</h4>
 
 <h1 align="center">
     <a href="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"><img src="https://gist.githubusercontent.com/LinArcX/4dde221ebf32b852586c65ecffdaa67f/raw/5846037655687b2e16f733eff2ca593fbce108f4/process.png"></a>
