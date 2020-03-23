@@ -1,9 +1,9 @@
 /.clangd/*
-/garbage/*
 
 /build/*
 /debug/*
 /release/*
+/garbage/*
 
 /test/build/*
 

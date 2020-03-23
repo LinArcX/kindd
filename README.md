@@ -33,19 +33,19 @@
 First Install these dependencies first:
 
 #### Dependencies
-runtime dependencies:
-- qt5-svg
-- qt5-quickcontrols
-- qt5-quickcontrols2
-- qt5-graphicaleffects
-- polkit-gnome
-
 build dependencies:
 - cmake
 - pkg-config
 - qt5-devel
 - qt5-declarative-devel
 - qt5-quickcontrols2-devel
+
+runtime dependencies:
+- qt5-svg
+- qt5-quickcontrols
+- qt5-quickcontrols2
+- qt5-graphicaleffects
+- polkit-gnome
 
 Then clone and build the project:
 
