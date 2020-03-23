@@ -37,11 +37,25 @@ in
     FONTCONFIG_FILE = "${pkgs-2020-03-23.fontconfig.out}/etc/fonts/fonts.conf";
     LOCALE_ARCHIVE = "${pkgs-2020-03-23.glibcLocales}/lib/locale/locale-archive";
 
+      #cd build; cmake ..; make
+#    export CC=${pkgs-2020-03-23.clang}/bin/clang"
+#      export CXX=${pkgs-2020-03-23.clang}/bin/clang++
+
+
     shellHook = ''
       export NAME=${pname}
       export CMAKE=${unstable.cmake}/bin/cmake
       export CLANGD=${pkgs-2020-03-23.clang-tools}/bin/clangd
+
+      export C_COMPILER="-DCMAKE_C_COMPILER=${pkgs-2020-03-23.clang}/bin/clang"
+      export CXX_COMPILER=-DCMAKE_CXX_COMPILER=${pkgs-2020-03-23.clang}/bin/clang++
+
+      export CMAKE_ARGS="-Wdeprecated -Wno-dev -Wall -Wextra -pedantic"
+      export CMAKE_VERBOSE="-DCMAKE_VERBOSE_MAKEFILE=ON"
+      export CMAKE_EXPORT_JSON="-DCMAKE_EXPORT_COMPILE_COMMANDS=ON"
+
+      export CMAKE_DEBUG="-DCMAKE_BUILD_TYPE=Debug ../;"
+      export CMAKE_RELEASE="-DCMAKE_BUILD_TYPE=RELEASE ../;"
+      export CMAKE_INCLUDE_CURRENT_DIR="-DCMAKE_INCLUDE_CURRENT_DIR=ON"
     '';
   }
-
-      #pkgs-2020-03-23.qt5.full
