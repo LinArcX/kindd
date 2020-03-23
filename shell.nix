@@ -37,11 +37,6 @@ in
     FONTCONFIG_FILE = "${pkgs-2020-03-23.fontconfig.out}/etc/fonts/fonts.conf";
     LOCALE_ARCHIVE = "${pkgs-2020-03-23.glibcLocales}/lib/locale/locale-archive";
 
-      #cd build; cmake ..; make
-#    export CC=${pkgs-2020-03-23.clang}/bin/clang"
-#      export CXX=${pkgs-2020-03-23.clang}/bin/clang++
-
-
     shellHook = ''
       export NAME=${pname}
       export CMAKE=${unstable.cmake}/bin/cmake
@@ -59,3 +54,7 @@ in
       export CMAKE_INCLUDE_CURRENT_DIR="-DCMAKE_INCLUDE_CURRENT_DIR=ON"
     '';
   }
+
+# cd build; cmake ..; make
+#    export CC=${pkgs-2020-03-23.clang}/bin/clang"
+#      export CXX=${pkgs-2020-03-23.clang}/bin/clang++
