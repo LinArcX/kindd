@@ -4,7 +4,7 @@ let
   pkgs-2020-03-23 = import (fetchTarball https://github.com/NixOS/nixpkgs/archive/793c1b5c72abbfed2f98add0811a022fc713dbf3.tar.gz) {};
 in
   pkgs-2020-03-23.clangStdenv.mkDerivation rec {
-    pname   = "captain-ballard";
+    pname   = "kindd";
     version = "1.0.0";
     name    = "${pname}${version}";
 
