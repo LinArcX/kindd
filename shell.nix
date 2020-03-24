@@ -17,7 +17,7 @@ in
     ];
 
     buildInputs = [
-      pkgs-2020-03-23.lldb
+      pkgs-2020-03-23.lldb_9
       pkgs-2020-03-23.clang-tools
       pkgs-2020-03-23.clang-analyzer
 
@@ -52,9 +52,7 @@ in
       export CMAKE_DEBUG="-DCMAKE_BUILD_TYPE=Debug ../;"
       export CMAKE_RELEASE="-DCMAKE_BUILD_TYPE=RELEASE ../;"
       export CMAKE_INCLUDE_CURRENT_DIR="-DCMAKE_INCLUDE_CURRENT_DIR=ON"
+
+      export LLDB_VSCODE=${pkgs-2020-03-23.lldb_9}/bin/lldb-vscode
     '';
   }
-
-# cd build; cmake ..; make
-#    export CC=${pkgs-2020-03-23.clang}/bin/clang"
-#      export CXX=${pkgs-2020-03-23.clang}/bin/clang++
