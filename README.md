@@ -37,6 +37,7 @@ build dependencies:
 - cmake
 - pkg-config
 - qt5-devel
+- qt5-svg-devel
 - qt5-declarative-devel
 - qt5-quickcontrols2-devel
 
@@ -45,7 +46,6 @@ runtime dependencies:
 - qt5-quickcontrols
 - qt5-quickcontrols2
 - qt5-graphicaleffects
-- polkit-gnome
 
 Then clone and build the project:
 
@@ -59,8 +59,18 @@ And finally, run it:
 
 `cd ..; build/kindd`
 
+## Polkit
+**kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed. Like these:
+- xfce-polkit
+- polkit-gnome
+- pantheon-agent-polki
+- mate-polkit
+- polkit-kde-agent
+
+But users of windows managers(like i3, dwm, awesome, ...) should install an agent. After downloading polkit-agent, paste this line into your wm's config file.(For i3, it's: __i3/config__):
+
+- polkit-gnome
 ### Tip for Windows-manager's Users
-**kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed, but users of i3(or maybe some other WMs) should install an agent. I prefer to use `polkit-gnome`. After downloading this packges, paste this line into __i3/config__ file:
 
 #### Arch users
 Just paste this line into your i3.config:
@@ -72,7 +82,7 @@ Just paste this line into your `i3.config`:
 
 `exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &`
 
-Hint: I don't have awesome or other wms. So you should change above lines according to your needs.
+Hint: I don't have awesome or other windows managers. So you should change above lines according to your needs.
 
 ## License
 ![License](https://img.shields.io/github/license/LinArcX/kindd.svg)
