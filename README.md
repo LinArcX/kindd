@@ -14,20 +14,18 @@
 
 ## Purposes
 1. Provide a modern/simple/safe UI for dd command.
-2. Create bootable USB withouth worring!
+2. Create bootable USB withouth worrying!
 
 ## Installation
 ### Void
 `sudo xbps-install -S kindd`
 
 ### Arch
-- git version
+Release version:
+- kindd
 
-`trizen -S kindd-git`
-
-- release version
-
-`trizen -S kindd`
+Git version:
+- kindd-git
 
 ### Build From Source
 First Install these dependencies first:
