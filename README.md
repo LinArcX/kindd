@@ -65,22 +65,15 @@ And finally, run it:
 - mate-polkit
 - polkit-kde-agent
 
-But users of windows managers(like i3, dwm, awesome, ...) should install an agent. After downloading polkit-agent, paste this line into your wm's config file.(For i3, it's: __i3/config__):
-
-- polkit-gnome
-### Tip for Windows-manager's Users
+But users of windows managers(like i3, dwm, awesome, ...) should install an agent. After installing a polkit-agent, paste these lines into your wm's config file.(For instance i3 keeps it's configs here: __i3/config__):
 
 #### Arch users
-Just paste this line into your i3.config:
-
 `exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &`
 
 #### Void users
-Just paste this line into your `i3.config`:
-
 `exec --no-startup-id /usr/libexec/polkit-gnome-authentication-agent-1 &`
 
-Hint: I don't have awesome or other windows managers. So you should change above lines according to your needs.
+Hint: I don't have awesome or other windows managers. So you should change above lines according to your agent and your wm.
 
 ## Donate
 - Bitcoin: `13T28Yd37qPtuxwTFPXeG9dWPahwDzWHjy`
