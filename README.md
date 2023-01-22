@@ -13,7 +13,7 @@
 </h1>
 
 ## Purposes
-1. Provide a modern/simple/safe UI for dd command.
+1. Provide a modern/simple/safe UI for `dd` command.
 2. Create bootable USB withouth worrying!
 
 ## Installation
@@ -32,6 +32,7 @@ First Install these dependencies first:
 
 #### Dependencies
 build dependencies:
+- git
 - cmake
 - pkg-config
 - qt5-devel
@@ -49,13 +50,15 @@ Then clone and build the project:
 
 ```
 git clone https://github.com/LinArcX/kindd/
-cd kindd; mkdir build; cd build
-cmake ..; make
+chmod +x ./build/tools/linux/sh/build.sh
+./build/tools/linux/sh/build.sh build_release
 ```
 
 And finally, run it:
 
-`cd ..; build/kindd`
+```
+./build/tools/linux/sh/build.sh run_release
+```
 
 ## Polkit
 **kindd** uses pkexec internally. For most Desktop environments, there is a pkexec agent already installed. Like these:
